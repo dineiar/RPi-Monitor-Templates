@@ -1,0 +1,4 @@
+# To use logging, create /var/log/rpimonitor-deluge.log manually as root and chown it to the running user (deluge)
+# This template is meant to be copied to /etc/cron.d/rpimonitor-deluge
+# run every 10 min
+*/10 * * * * deluge /usr/share/rpimonitor/web/addons/deluge/deluge.py /usr/share/rpimonitor/web/addons/deluge/ > /var/log/rpimonitor-deluge.log 2>&1

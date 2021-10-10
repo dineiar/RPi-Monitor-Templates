@@ -50,6 +50,19 @@ $ ./install.sh /mnt/mydevice sda2
 
 ![HD template](images/hd.png)
 
+### Deluge
+
+This template monitors torrents being downloaded by Deluge.
+It assumes that Deluge was installed using a user named "deluge", therefore it uses this username to extract Deluge information.
+If Deluge was installed using any other user, please change the username in `deluge/addon/rpimonitor-deluge.cron` before installing.
+
+By default this template shows in the Status page only the 4 most recent torrents added in Deluge (the download and upload numbers consider all torrents anyway), and provides a page under the Add-ons menu to view a complete list of torrents.
+```bash
+$ cd deluge
+$ ./install.sh
+```
+
+![Deluge template](images/deluge_status.png)
 
 # Issues
 When reporting issues, please zip the folder `/etc/rpimonitor` of your instalation and describe which installers were executed.
